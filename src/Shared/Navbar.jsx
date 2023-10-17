@@ -12,12 +12,12 @@ const Navbar = () => {
 
   const navigate = useNavigate();
 
-  // https://marriage-media-server-ongbh0igr-th-raju.vercel.app/
+  // https://matrimoni-ashik-rahman100.vercel.app/
   // http://serverapi.jutibadhi.com/
 
   const handleLogout = async () => {
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/logout",
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/logout",
       {
         method: "POST",
         headers: {
@@ -128,7 +128,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-200  bg-opacity-75 sticky z-20 top-0 text-black font-bold shadow-lg">
+    <div className="navbar bg-base-300  bg-opacity-75 sticky z-20 top-0 text-black font-bold shadow-lg">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">

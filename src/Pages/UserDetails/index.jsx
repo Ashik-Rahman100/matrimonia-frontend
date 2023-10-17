@@ -1,12 +1,12 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useLoaderData, useNavigate } from "react-router-dom";
-import img from "../../assets/5.jpg";
-import { useForm } from "react-hook-form";
-import Cookies from "universal-cookie";
-import toast, { Toaster } from "react-hot-toast";
 import { useEffect, useState } from "react";
-import { packageCheck, proposalSendCheck } from "../../Utils/purchesTimeCheck";
+import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
+import { useLoaderData, useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
+import { packageCheck } from "../../Utils/purchesTimeCheck";
+import img from "../../assets/5.jpg";
 
 const UserDetails = () => {
   const [allUser, setAllUser] = useState([]);
@@ -57,7 +57,7 @@ const UserDetails = () => {
       data.senderId = signleUserId[0];
       // console.log(data);
       fetch(
-        `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/proposal/send`,
+        `https://matrimoni-ashik-rahman100.vercel.app/api/v1/proposal/send`,
         {
           method: "POST",
           headers: {
@@ -86,7 +86,7 @@ const UserDetails = () => {
 
   useEffect(() => {
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/"
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/"
     )
       .then((res) => res.json())
       .then((data) => setAllUser(data.message));

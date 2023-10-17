@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import { CheckIcon } from "@heroicons/react/24/solid";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import Cookies from "universal-cookie";
@@ -12,7 +11,7 @@ const Orders = () => {
   const { data: users = [], refetch } = useQuery({
     queryKey: ["usrrr"],
     queryFn: async () => {
-      let url = `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user`;
+      let url = `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user`;
 
       const res = await fetch(url);
       const data = await res.json();

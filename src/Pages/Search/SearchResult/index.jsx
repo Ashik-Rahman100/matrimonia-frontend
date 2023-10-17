@@ -1,6 +1,6 @@
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import HomeSearchCard from "../../../Components/HomeSearchCard";
-import { useEffect, useState } from "react";
 
 const SearchResult = () => {
   const [users, setUsers] = useState([]);
@@ -19,7 +19,7 @@ const SearchResult = () => {
   useEffect(() => {
     setLoading(true);
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user"
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user"
     )
       .then((res) => res.json())
       .then((data) => {

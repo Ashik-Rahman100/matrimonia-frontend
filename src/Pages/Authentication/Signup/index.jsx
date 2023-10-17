@@ -1,15 +1,10 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
-import { maritalOptions } from "../../../Components/MaritalOptions";
-import { bloodOptions } from "../../../Components/BloodGroup";
-import { educationOptions } from "../../../Components/EducationOptions";
-import { professionOptions } from "../../../Components/Occupations";
-import { countryOptions } from "../../../Components/Countries";
 import { useState } from "react";
+import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 
 const Signup = () => {
@@ -43,7 +38,7 @@ const Signup = () => {
     // console.log(img);
 
     // for multer router use this route
-    // const url = `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/img/upload`;
+    // const url = `https://matrimoni-ashik-rahman100.vercel.app/api/v1/img/upload`;
 
     const url = `https://api.imgbb.com/1/upload?key=${imgHostKey}`;
     fetch(url, {
@@ -59,7 +54,7 @@ const Signup = () => {
         setLoading(true);
         setNextState(" ");
         fetch(
-          "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/signup",
+          "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/signup",
           {
             method: "POST",
             headers: {
@@ -81,7 +76,7 @@ const Signup = () => {
             }
           });
         fetch(
-          "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/userData/create",
+          "https://matrimoni-ashik-rahman100.vercel.app/api/v1/userData/create",
           {
             method: "POST",
             headers: {

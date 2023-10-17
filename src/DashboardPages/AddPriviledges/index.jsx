@@ -1,9 +1,9 @@
 /* eslint-disable no-unused-vars */
 
 import { useQuery } from "@tanstack/react-query";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
-import { useEffect, useRef, useState } from "react";
 
 const AddPriviledge = () => {
   const [selectPackage, setSelectPackage] = useState([]);
@@ -23,7 +23,7 @@ const AddPriviledge = () => {
     queryKey: ["condition"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/package"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/package"
       );
       const data = await res.json();
       return data.message;
@@ -62,7 +62,7 @@ const AddPriviledge = () => {
     // console.log(remainingPackageConditions);
 
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/package",
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/package",
       {
         method: "PATCH",
         headers: {
@@ -98,7 +98,7 @@ const AddPriviledge = () => {
     console.log(allCondition);
 
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/package",
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/package",
       {
         method: "PATCH",
         headers: {

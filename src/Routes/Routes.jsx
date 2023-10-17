@@ -1,31 +1,31 @@
 import { createBrowserRouter } from "react-router-dom";
-import MainLayout from "../Layout/MainLayout";
-import Home from "../Pages/Home";
-import Packages from "../Pages/Home/Packages";
-import Login from "../Pages/Authentication/Login";
-import Signup from "../Pages/Authentication/Signup";
-import Search from "../Pages/Search";
-import Contacts from "../Pages/Contact";
-import UserDetails from "../Pages/UserDetails";
-import PrivateRoute from "../SecureRoute/PrivateRoute";
-import Profile from "../Pages/Profile";
-import HomeSearchResult from "../Pages/Search/HomeSearchResult";
-import SearchResult from "../Pages/Search/SearchResult";
-import Proposals from "../Pages/Proposals";
-import DashboardLayout from "../Layout/DashboardLayout";
-import AllUser from "../DashboardPages/AllUser";
-import AdminRoute from "../SecureRoute/AdminRoute";
-import ErrorPage from "../Pages/ErrorPage";
-import MembershipForm from "../Pages/MembershipForm";
+import AcceptProposal from "../DashboardPages/AcceptProposal";
 import AddPriviledge from "../DashboardPages/AddPriviledges";
+import AllUser from "../DashboardPages/AllUser";
+import Orders from "../DashboardPages/Orders";
 import PackageUpdate from "../DashboardPages/PackageUpdate";
+import Profiles from "../DashboardPages/Profiles";
 import PurchesPending from "../DashboardPages/PurchesPending";
 import UserDashboard from "../DashboardPages/UserDashboard";
-import Orders from "../DashboardPages/Orders";
-import UserOrAdmin from "../SecureRoute/UserOrAdmin";
-import AcceptProposal from "../DashboardPages/AcceptProposal";
-import Profiles from "../DashboardPages/Profiles";
 import VisitedProfile from "../DashboardPages/VisitedProfile";
+import DashboardLayout from "../Layout/DashboardLayout";
+import MainLayout from "../Layout/MainLayout";
+import Login from "../Pages/Authentication/Login";
+import Signup from "../Pages/Authentication/Signup";
+import Contacts from "../Pages/Contact";
+import ErrorPage from "../Pages/ErrorPage";
+import Home from "../Pages/Home";
+import Packages from "../Pages/Home/Packages";
+import MembershipForm from "../Pages/MembershipForm";
+import Profile from "../Pages/Profile";
+import Proposals from "../Pages/Proposals";
+import Search from "../Pages/Search";
+import HomeSearchResult from "../Pages/Search/HomeSearchResult";
+import SearchResult from "../Pages/Search/SearchResult";
+import UserDetails from "../Pages/UserDetails";
+import AdminRoute from "../SecureRoute/AdminRoute";
+import PrivateRoute from "../SecureRoute/PrivateRoute";
+import UserOrAdmin from "../SecureRoute/UserOrAdmin";
 
 export const router = createBrowserRouter([
   {
@@ -65,7 +65,7 @@ export const router = createBrowserRouter([
         ),
         loader: ({ params }) =>
           fetch(
-            `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/${params.id}`
+            `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/${params.id}`
           ),
       },
       {

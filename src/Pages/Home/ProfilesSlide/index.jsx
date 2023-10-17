@@ -16,7 +16,7 @@ export default function ProfilesSlide() {
     queryKey: ["usersas"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user"
       );
       const data = await res.json();
       const filteredData = data?.message?.filter(
@@ -53,40 +53,37 @@ export default function ProfilesSlide() {
   //   spacePerView = 40;
   // }
 
-  var settings = {
+  let settings = {
     centerMode: true,
-    centerPadding: '60px',
     slidesToShow: 3,
     autoplay: true,
     autoplaySpeed: 2000,
-    dots:true,
+    dots: true,
     responsive: [
       {
         breakpoint: 768,
         settings: {
           arrows: false,
           centerMode: true,
-          centerPadding: '40px',
+          centerPadding: "20px",
           slidesToShow: 2,
-          autoplay:true,
-          dots:true,
-        }
+          autoplay: true,
+          dots: true,
+        },
       },
       {
         breakpoint: 480,
         settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: '40px',
-          slidesToShow: 1,
-          dots:false,
-          autoplay:true
-        }
-      }
-    ]
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: "linear",
+        },
+      },
+    ],
   };
   return (
-    <div className="mt-56 md:mt-20 lg:mt-20">
+    <div className="mt-20 md:mt-20 lg:mt-20">
       <h1 className="text-3xl text-black  text-center lg:text-5xl  font-bold">
         <span className="font-libre">Profiles</span>
       </h1>
@@ -102,6 +99,8 @@ export default function ProfilesSlide() {
         been easier. Start your journey towards a loving and lasting
         relationship by browsing through our carefully curated profiles today
       </p> */}
+
+      {/* swiper carousel */}
       {/* <Swiper */}
       {/* ref={swiperRef} */}
       {/* slidesPerView={slidesPerView} */}
@@ -125,6 +124,8 @@ export default function ProfilesSlide() {
       {/* </SwiperSlide> */}
       {/* ))} */}
       {/* </Swiper> */}
+
+      {/*React slick carousel */}
       <Slider {...settings}>
         {usersProfile &&
           usersProfile?.map((user) => (

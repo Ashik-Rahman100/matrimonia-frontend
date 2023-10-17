@@ -46,7 +46,7 @@ const PackageCard = ({ pack, id }) => {
     };
 
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/profile/update/${userEmail}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/profile/update/${userEmail}`,
       {
         method: "PATCH",
         headers: {
@@ -72,7 +72,7 @@ const PackageCard = ({ pack, id }) => {
   };
 
   return (
-    <div className="flex justify-center w-full mb-8 sm:px-4 md:w-1/2 lg:w-1/3 lg:mb-0">
+    <div className="flex justify-center w-full ">
       <Toaster />
       <div
         className={`flex flex-col  space-y-6 rounded shadow  p-4 text-black  

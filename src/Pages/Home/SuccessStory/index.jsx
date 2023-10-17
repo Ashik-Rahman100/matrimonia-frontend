@@ -1,10 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import SuccessCard from "../../../Components/SuccessCard";
 
 const SuccessStory = () => {
@@ -40,12 +40,12 @@ const SuccessStory = () => {
   }, []);
 
   return (
-    <div className="md:my-24">
+    <div className="md:mt-10">
       <div className="text-center md:my-10">
-        <h1 className="text-3xl font-bold">
+        <h1 className="text-3xl lg:text-5xl font-libre font-bold ">
           Success <span className="text-red-600">Story</span>
         </h1>
-        <h2 className="text-2xl md:w-3/6 w-4/5 mx-auto text-black my-5 font-bold text-center lg:text-5xl">
+        <h2 className="text-2xl md:w-3/6 w-4/5 mx-auto text-black my-5 font-bold text-center ">
           The Juti Badhi Journey to Matchmaking Success
         </h2>
         <p className="text-center  md:w-3/6 w-4/5 mx-auto">
@@ -70,7 +70,7 @@ const SuccessStory = () => {
           delay: 2000,
           disableOnInteraction: false,
         }}
-        className="mySwiper  md:w-[80%] mx-auto my-5"
+        className="mySwiper w-[100%]  md:w-[80%] mx-auto my-5"
       >
         {storys.map((story) => (
           <SwiperSlide key={story.id}>

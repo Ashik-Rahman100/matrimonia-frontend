@@ -7,7 +7,7 @@ const Packages = () => {
     queryKey: ["categoriy"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/package"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/package"
       );
       const data = await res.json();
       // refetch();
@@ -16,12 +16,12 @@ const Packages = () => {
   });
 
   return (
-    <div className=" container px-4 mx-auto pt-20  text-black mb-10">
+    <div className=" container px-4 mx-auto pt-20  text-black ">
       <div className="max-w-2xl mx-auto mb-8 text-center">
-        <span className=" tracki uppercase text-black text-xl font-bold">
+        <span className=" tracki uppercase text-black text-3xl lg:text-5xl font-libre font-bold">
           Membership <span className="text-red-600">Plans</span>
         </span>
-        <h2 className="text-4xl text-black font-bold lg:text-5xl">
+        <h2 className="text-4xl text-black font-bold ">
           Choose your best plan
         </h2>
         <p className="mt-5">
@@ -32,7 +32,7 @@ const Packages = () => {
         </p>
       </div>
 
-      <div className="flex flex-wrap justify-center items-center-mx-4 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4   gap-4">
         {packages?.map((pack) => (
           <PackageCard pack={pack} key={pack.id} id={pack._id}></PackageCard>
         ))}

@@ -11,7 +11,7 @@ const PurchesPending = () => {
     queryKey: ["usr"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user"
       );
       const data = await res.json();
 
@@ -39,7 +39,7 @@ const PurchesPending = () => {
     // console.log(userEmail, purchesPackage);
 
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/profile/update/${userEmail}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/profile/update/${userEmail}`,
       {
         method: "PATCH",
         headers: {
@@ -63,7 +63,7 @@ const PurchesPending = () => {
     // console.log(userEmail, purchesPackage);
 
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/profile/update/${userEmail}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/profile/update/${userEmail}`,
       {
         method: "PATCH",
         headers: {

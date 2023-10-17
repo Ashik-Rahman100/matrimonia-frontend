@@ -51,80 +51,62 @@ export const Faq = () => {
               FAQ's
             </p>
           </div>
-          <h2 className="max-w-lg mb-6 text-center font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-            <span className="relative inline-block">
-              <svg
-                viewBox="0 0 52 24"
-                fill="currentColor"
-                className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-              >
-                <defs>
-                  <pattern
-                    id="232db96b-4aa2-422f-9086-5a77996d1df1"
-                    x="0"
-                    y="0"
-                    width=".135"
-                    height=".30"
-                  >
-                    <circle cx="1" cy="1" r=".7" />
-                  </pattern>
-                </defs>
-                <rect
-                  fill="url(#232db96b-4aa2-422f-9086-5a77996d1df1)"
-                  width="52"
-                  height="24"
-                />
-              </svg>
-              <span className="relative md:block hidden">?</span>
-            </span>{" "}
+          <h2 className="max-w-lg mb-6 text-center font-sans text-3xl  font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
             Frequently Asked Questions
           </h2>
           <p className="text-base text-gray-700 md:text-lg ">
-            Consider promoting the FAQ section during onboarding or through
-            notifications to new users to encourage them to explore it and find
-            answers to their questions.{" "}
+            Most of the users asking this kind of questions which is shown in
+            below with our answers.
           </p>
         </div>
-        <div className="space-y-4">
+        <div className="space-y-1">
           <Item
-            title="Is It FREE to create profile in Marriage Media?
+            title="How to find a quick and suitable match ?
 "
           >
-            Absolutely. Creating a profile in BD Marriage is completely FREE and
-            no service charge is required. Create your profile and enjoy the
-            exciting services.
+            Keep a constant eye on our app to view newly registered profiles. By
+            viewing the given details, of the bride or groom, you can select the
+            one who meets all your expectations.
           </Item>
           <Item
-            title="How can i create my profile on Juti Badhi?
+            title="How to active and existing plan ?
 "
           >
-            It's very easy & simple. Just click Register Now to go to the
-            registration page and follow the steps by filling up all the
-            required information.
+            Choose a package that is affordable for you. Click that plan and you
+            will be taken to the payment. After your payment, you will be
+            activated to the premium membership.
           </Item>
           <Item
-            title="How long does it take to create my profile?
+            title="How to find a nearby profile?
 "
           >
-            It will take less than 10 minutes. However, we suggest you fill up
-            all information nicely so that others will get a better
-            understanding of you.
+            Select your preferable location in the filter option. You will get
+            hundreds of profiles from your selected location.
           </Item>
           <Item
-            title="What is Profile ID?
+            title="Can I edit my profile after registration?
 "
           >
-            Profile ID is a unique auto-generated Id. All members have a unique
-            ID on Juti Badhi. Other members can search your profile by your
-            Profile ID.
+            Yes, you can!! Contact our team (78239 21155) and tell them the
+            information to change and they will update your profile
           </Item>
           <Item
-            title="Are my photos are secure?
+            title="How to contact customer care?
 
 "
           >
-            Yes. Your photos are secure. On Juti Badhi, all photos are coded and
-            tamper-proof.
+            Call this toll-free number 78239 21155 . Or else you can contact us
+            via Gmail and WhatsApp. Gmail: manamaalai@nithra.mobi Whatsapp:
+            9150029420
+          </Item>
+          <Item
+            title="How to contact a profile I liked?
+
+"
+          >
+            If you are interested in a profile, you can click on the favorite
+            icon so that they will receive a notification of your request. If
+            they accept your request, you will receive their contact details.
           </Item>
         </div>
       </div>

@@ -1,15 +1,15 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useForm } from "react-hook-form";
-import { maritalOptions } from "../MaritalOptions";
-import { bloodOptions } from "../BloodGroup";
-import { educationOptions } from "../EducationOptions";
-import { professionOptions } from "../Occupations";
-import { countryOptions } from "../Countries";
-import toast, { Toaster } from "react-hot-toast";
 import { useQuery } from "@tanstack/react-query";
-import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import { bloodOptions } from "../BloodGroup";
+import { countryOptions } from "../Countries";
+import { educationOptions } from "../EducationOptions";
+import { maritalOptions } from "../MaritalOptions";
+import { professionOptions } from "../Occupations";
 
 /* eslint-disable react/prop-types */
 const EditModal = ({ id, user }) => {
@@ -42,7 +42,7 @@ const EditModal = ({ id, user }) => {
     queryKey: ["users"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user"
       );
       const data = await res.json();
       return data;
@@ -54,7 +54,7 @@ const EditModal = ({ id, user }) => {
     // console.log(user.email);
     reset();
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/profile/update/${user?.email}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/profile/update/${user?.email}`,
       {
         method: "PATCH",
         headers: {

@@ -2,7 +2,7 @@
 
 import toast from "react-hot-toast";
 import { PhotoProvider, PhotoView } from "react-photo-view";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
 import { packageCheck } from "../../Utils/purchesTimeCheck";
 import pic from "../../assets/marriage.jpg";
@@ -46,7 +46,8 @@ const HomeSearchCard = ({ user }) => {
   };
 
   return (
-    <div className="card  card-compact w-72 shadow-md md:mx-4 mx-6 sm:px-2 mt-9 mb-14  py-3">
+    <Link to={`https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/${_id}`}>
+    <div className="card  card-compact w-[100%] shadow-md mt-9 mb-14  py-3">
       <figure>
         <PhotoProvider>
           <PhotoView src={photo ? photo : pic}>
@@ -99,6 +100,7 @@ const HomeSearchCard = ({ user }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 

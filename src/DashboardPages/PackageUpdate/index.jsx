@@ -16,7 +16,7 @@ const PackageUpdate = () => {
     }
 
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/package",
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/package",
       {
         method: "PATCH",
         headers: {

@@ -9,7 +9,7 @@ export const packageCheck = async (option, id) => {
   console.log(option, id);
 
   const userInfo = await fetch(
-    `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/getuser/${userEmail}`
+    `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/getuser/${userEmail}`
   );
   const user = await userInfo.json();
 
@@ -93,7 +93,7 @@ export const packageCheck = async (option, id) => {
     console.log(purchesPackage);
 
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/profile/update/${userEmail}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/profile/update/${userEmail}`,
       {
         method: "PATCH",
         headers: {
@@ -113,7 +113,7 @@ export const profileViewCheck = async (id) => {
   const userRole = cookies.get("role");
 
   const userInfo = await fetch(
-    `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/getuser/${userEmail}`
+    `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/getuser/${userEmail}`
   );
 
   const user = await userInfo.json();
@@ -173,7 +173,7 @@ export const profileViewCheck = async (id) => {
     console.log(purchesPackage);
 
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/profile/update/${userEmail}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/profile/update/${userEmail}`,
       {
         method: "PATCH",
         headers: {
@@ -196,7 +196,7 @@ export const proposalSendCheck = async () => {
   const userRole = cookies.get("role");
 
   const userInfo = await fetch(
-    `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/getuser/${userEmail}`
+    `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/getuser/${userEmail}`
   );
 
   const user = await userInfo.json();
@@ -246,7 +246,7 @@ export const proposalSendCheck = async () => {
     };
 
     // fetch(
-    //   `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/profile/update/${userEmail}`,
+    //   `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/profile/update/${userEmail}`,
     //   {
     //     method: "PATCH",
     //     headers: {

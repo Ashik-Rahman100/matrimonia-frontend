@@ -1,14 +1,13 @@
 /* eslint-disable no-unused-vars */
-import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
 import {
-  PencilSquareIcon,
-  ChatBubbleLeftEllipsisIcon,
+    ChatBubbleLeftEllipsisIcon,
+    PencilSquareIcon,
 } from "@heroicons/react/24/solid";
-import EditModal from "../../Components/EditModal";
-import Cookies from "universal-cookie";
-import { PhotoProvider, PhotoView } from "react-photo-view";
 import { useQuery } from "@tanstack/react-query";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import Cookies from "universal-cookie";
+import EditModal from "../../Components/EditModal";
 // import { useQuery } from "@tanstack/react-query";
 
 const Profiles = () => {
@@ -31,14 +30,14 @@ const Profiles = () => {
 
   // console.log(userEmail);
 
-  // fetch(`https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/getuser/${params.email}`)
+  // fetch(`https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/getuser/${params.email}`)
   // console.log(allProposals);
 
   const { data: users = [] } = useQuery({
     queryKey: ["usropu"],
     queryFn: async () => {
       const res = await fetch(
-        `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/getuser/${userEmail}`
+        `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/getuser/${userEmail}`
       );
       const data = await res.json();
 
@@ -55,7 +54,7 @@ const Profiles = () => {
 
   useEffect(() => {
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/proposal/"
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/proposal/"
     )
       .then((res) => res.json())
       .then((data) => setAllProposals(data.message));

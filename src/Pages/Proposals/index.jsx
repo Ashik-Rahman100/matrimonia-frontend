@@ -1,9 +1,9 @@
 /* eslint-disable react/no-unescaped-entities */
+import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
-import toast, { Toaster } from "react-hot-toast";
-import { useQuery } from "@tanstack/react-query";
 import { profileViewCheck } from "../../Utils/purchesTimeCheck";
 
 const Proposals = () => {
@@ -15,7 +15,7 @@ const Proposals = () => {
     queryKey: ["proposals"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/proposal"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/proposal"
       );
       const data = await res.json();
       return data.message.filter(
@@ -40,7 +40,7 @@ const Proposals = () => {
     setLoading(true);
 
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/proposal/req/proposal/update`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/proposal/req/proposal/update`,
       {
         method: "PATCH",
         headers: {
@@ -74,7 +74,7 @@ const Proposals = () => {
     setLoading(true);
 
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/proposal/req/proposal/update`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/proposal/req/proposal/update`,
       {
         method: "PATCH",
         headers: {

@@ -5,7 +5,7 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import imge from "../../assets/marriage.jpg";
 const SuccessCard = ({ story }) => {
   return (
-    <div className="card lg:card-side lg:h-64 bg-base-100 shadow-xl mx-10 mb-16 ">
+    <div className="card lg:card-side lg:h-68 bg-base-100 shadow-xl mx-12 mb-16 p-2">
       <figure>
         <PhotoProvider>
           <PhotoView src={story.pic ? story.pic : imge}>

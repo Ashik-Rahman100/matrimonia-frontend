@@ -2,8 +2,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import ConfirmModal from "../../Shared/ConfirmModal";
 import Cookies from "universal-cookie";
+import ConfirmModal from "../../Shared/ConfirmModal";
 
 const AllUser = () => {
   const [deleteUser, setDeleteUser] = useState(null);
@@ -18,7 +18,7 @@ const AllUser = () => {
     queryKey: ["usr"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user"
       );
       const data = await res.json();
 
@@ -35,7 +35,7 @@ const AllUser = () => {
   // console.log(users.map((user) => user.role));
   const handleDeleteUser = (user) => {
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/delete/user/1/${user._id}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/delete/user/1/${user._id}`,
       {
         method: "DELETE",
         headers: {
@@ -54,7 +54,7 @@ const AllUser = () => {
 
   const handleMakeAdmin = (id) => {
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/update/user/1/admin/${id}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/update/user/1/admin/${id}`,
       {
         method: "PUT",
         headers: {
@@ -72,7 +72,7 @@ const AllUser = () => {
   };
   const handleMakeUser = (id) => {
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/update/admin/to/1/user/${id}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/update/admin/to/1/user/${id}`,
       {
         method: "PUT",
         headers: {

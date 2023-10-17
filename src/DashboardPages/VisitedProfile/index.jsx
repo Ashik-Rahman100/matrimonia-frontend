@@ -16,7 +16,7 @@ const VisitedProfile = () => {
     queryFn: async () => {
       setLoading(true);
       const res = await fetch(
-        `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/getuser/${userEmail}`
+        `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/getuser/${userEmail}`
       );
       const data = await res.json();
       if (data) {
@@ -31,7 +31,7 @@ const VisitedProfile = () => {
 
   useEffect(() => {
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user"
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user"
     )
       .then((res) => res.json())
       .then((data) => {

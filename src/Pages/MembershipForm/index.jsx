@@ -1,17 +1,17 @@
 /* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useForm } from "react-hook-form";
-import { Link, useNavigate } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast";
-import { useState } from "react";
-import Cookies from "universal-cookie";
-import { maritalOptions } from "../../Components/MaritalOptions";
-import { bloodOptions } from "../../Components/BloodGroup";
-import { educationOptions } from "../../Components/EducationOptions";
-import { professionOptions } from "../../Components/Occupations";
-import { countryOptions } from "../../Components/Countries";
 import { useQuery } from "@tanstack/react-query";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+import Cookies from "universal-cookie";
+import { bloodOptions } from "../../Components/BloodGroup";
+import { countryOptions } from "../../Components/Countries";
+import { educationOptions } from "../../Components/EducationOptions";
+import { maritalOptions } from "../../Components/MaritalOptions";
+import { professionOptions } from "../../Components/Occupations";
 
 const MembershipForm = () => {
   const [nextState, setNextState] = useState("basic");
@@ -25,7 +25,7 @@ const MembershipForm = () => {
     queryKey: ["users"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user"
       );
       const data = await res.json();
       return data.message;
@@ -46,7 +46,7 @@ const MembershipForm = () => {
     // console.log(user[0]?.email);
     reset();
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/profile/update/${userEmail}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/profile/update/${userEmail}`,
       {
         method: "PATCH",
         headers: {

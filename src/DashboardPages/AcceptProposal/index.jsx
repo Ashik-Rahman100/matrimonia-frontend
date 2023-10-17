@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
+import { EyeIcon } from "@heroicons/react/24/solid";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import ConfirmModal from "../../Shared/ConfirmModal";
-import { EyeIcon } from "@heroicons/react/24/solid";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
+import ConfirmModal from "../../Shared/ConfirmModal";
 import Loading from "../../Shared/Loading";
 
 const AcceptProposal = () => {
@@ -30,7 +30,7 @@ const AcceptProposal = () => {
     queryFn: async () => {
       setLoading(true);
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/proposal"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/proposal"
       );
       const data = await res.json();
       if (data) {
@@ -68,7 +68,7 @@ const AcceptProposal = () => {
 
   useEffect(() => {
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/getuser/${requestUser}`
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/getuser/${requestUser}`
     )
       .then((res) => res.json())
       .then((data) => setUserDetail(data?.message));
@@ -78,7 +78,7 @@ const AcceptProposal = () => {
 
   const handleDeleteUser = (accpetPro) => {
     fetch(
-      `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/proposal/delete/${accpetPro._id}`,
+      `https://matrimoni-ashik-rahman100.vercel.app/api/v1/proposal/delete/${accpetPro._id}`,
       {
         method: "DELETE",
         headers: {

@@ -2,7 +2,6 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import Cookies from "universal-cookie";
-import { Link } from "react-router-dom";
 import Packages from "../../Pages/Home/Packages";
 
 const UserDashboard = () => {
@@ -17,7 +16,7 @@ const UserDashboard = () => {
     queryFn: async () => {
       setLoading(true);
       const res = await fetch(
-        `https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/getuser/${userEmail}`
+        `https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/getuser/${userEmail}`
       );
       const data = await res.json();
 
@@ -30,7 +29,7 @@ const UserDashboard = () => {
     queryKey: ["categoriy"],
     queryFn: async () => {
       const res = await fetch(
-        "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/package"
+        "https://matrimoni-ashik-rahman100.vercel.app/api/v1/package"
       );
       const data = await res.json();
 

@@ -2,10 +2,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import toast, { Toaster } from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
-import toast, { Toaster } from "react-hot-toast";
 import Loading from "../../../Shared/Loading";
+import login from "../../../assets/login.png";
 
 const Login = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -27,7 +28,7 @@ const Login = () => {
 
     setLoading(true);
     fetch(
-      "https://marriage-media-server-ongbh0igr-th-raju.vercel.app/api/v1/user/login",
+      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/login",
       {
         method: "POST",
         headers: {
@@ -57,7 +58,7 @@ const Login = () => {
       });
   };
   return (
-    <section className="relative m-16 flex flex-wrap lg:h-screen lg:items-center min-h-screen">
+    <section className="relative flex flex-wrap lg:h-screen lg:items-center min-h-screen">
       <Toaster></Toaster>
 
       {loading && (
@@ -171,7 +172,7 @@ const Login = () => {
       <div className="relative h-64 w-full object-cover sm:h-96 lg:h-full lg:w-1/2">
         <img
           alt="Welcome"
-          src="https://images.unsplash.com/photo-1519657814741-5781d2018f70?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fG1hcnJpYWdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60"
+          src={login}
           className="absolute inset-0 h-full w-full object-cover"
         />
       </div>
