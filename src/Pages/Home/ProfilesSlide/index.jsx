@@ -1,11 +1,11 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Swiper, SwiperSlide } from "swiper/react";
+import { useQuery } from "@tanstack/react-query";
+import { useEffect, useRef, useState } from "react";
+import Slider from "react-slick";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination, Autoplay } from "swiper/modules";
-import { useQuery } from "@tanstack/react-query";
+import { SwiperSlide } from "swiper/react";
 import Cookies from "universal-cookie";
-import { useEffect, useRef, useState } from "react";
 import HomeSearchCard from "../../../Components/HomeSearchCard";
 
 export default function ProfilesSlide() {
@@ -42,23 +42,55 @@ export default function ProfilesSlide() {
   // console.log("userProfile: ", usersProfile);
 
   // Determine the number of slides per view based on screen size
-  let slidesPerView = 4; // Default value for large screens
-  let spacePerView = 10; // Default value for large screens
+  // let slidesPerView = 4; // Default value for large screens
+  // let spacePerView = 10; // Default value for large screens
 
-  if (window?.innerWidth <= 768) {
-    slidesPerView = 1; // Small screens
-    spacePerView = 200;
-  } else if (window?.innerWidth <= 1024) {
-    slidesPerView = 2; // Medium screens
-    spacePerView = 40;
-  }
+  // if (window?.innerWidth <= 768) {
+  //   slidesPerView = 1; // Small screens
+  //   spacePerView = 200;
+  // } else if (window?.innerWidth <= 1024) {
+  //   slidesPerView = 2; // Medium screens
+  //   spacePerView = 40;
+  // }
 
+  var settings = {
+    centerMode: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    dots:true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 2,
+          autoplay:true,
+          dots:true,
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: '40px',
+          slidesToShow: 1,
+          dots:false,
+          autoplay:true
+        }
+      }
+    ]
+  };
   return (
-    <div className="md:my-24 my-14">
-      <h1 className="text-3xl text-center  font-bold">
-        Browse <span className="text-red-600">Profiles</span>
+    <div className="mt-56 md:mt-20 lg:mt-20">
+      <h1 className="text-3xl text-black  text-center lg:text-5xl  font-bold">
+        <span className="font-libre">Profiles</span>
       </h1>
-      <h2 className="text-3xl text-black my-5 font-bold text-center lg:text-5xl">
+      <h2 className="text-3xl  my-5 font-bold text-center ">
         Choose best Profile for yourself
       </h2>
       {/* <img src="./src/assets/ab.jpg" alt="abc" width="100px"></img> */}
@@ -70,21 +102,30 @@ export default function ProfilesSlide() {
         been easier. Start your journey towards a loving and lasting
         relationship by browsing through our carefully curated profiles today
       </p> */}
-      <Swiper
-        ref={swiperRef}
-        slidesPerView={slidesPerView}
-        spaceBetween={spacePerView}
-        loop={true}
-        pagination={{
-          clickable: true,
-        }}
-        modules={[Pagination, Autoplay]}
-        autoplay={{
-          delay: 1500,
-          disableOnInteraction: false,
-        }}
-        className="mySwiper w-[80%] mx-auto"
-      >
+      {/* <Swiper */}
+      {/* ref={swiperRef} */}
+      {/* slidesPerView={slidesPerView} */}
+      {/* spaceBetween={spacePerView} */}
+      {/* loop={true} */}
+      {/* pagination={{ */}
+      {/* clickable: true, */}
+      {/* }} */}
+      {/* modules={[Pagination, Autoplay]} */}
+      {/* autoplay={{ */}
+      {/* delay: 1500, */}
+      {/* disableOnInteraction: false, */}
+      {/* }} */}
+      {/* className="mySwiper w-[85%] mx-auto" */}
+      {/* > */}
+      {/* {usersProfile && */}
+      {/* usersProfile?.map((user) => ( */}
+      {/* <SwiperSlide key={user?._id}> */}
+      {/* <ProfileCard data={data} userEmail={userEmail}></ProfileCard> */}
+      {/* <HomeSearchCard key={user._id} user={user}></HomeSearchCard> */}
+      {/* </SwiperSlide> */}
+      {/* ))} */}
+      {/* </Swiper> */}
+      <Slider {...settings}>
         {usersProfile &&
           usersProfile?.map((user) => (
             <SwiperSlide key={user?._id}>
@@ -92,7 +133,7 @@ export default function ProfilesSlide() {
               <HomeSearchCard key={user._id} user={user}></HomeSearchCard>
             </SwiperSlide>
           ))}
-      </Swiper>
+      </Slider>
     </div>
   );
 }

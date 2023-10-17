@@ -8,7 +8,7 @@ const Banner = () => {
         className="hero  max-h-screen"
         style={{ backgroundImage: `url(${marriage})` }}
       >
-        <div className="bg-white rounded-lg p-6 md:mt-[27%] mt-[40%] mb-36 border-red-500 border">
+        <div className=" rounded-lg p-6 md:mt-[27%] mt-[40%] mb-36 border-blue-200 border">
           <BannerForm />
         </div>
       </div>

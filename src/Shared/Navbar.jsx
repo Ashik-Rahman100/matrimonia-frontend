@@ -128,7 +128,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-gradient-to-b from-red-300 to-gray-300 bg-opacity-75 fixed z-20 top-0 text-black font-bold shadow-lg">
+    <div className="navbar bg-base-200  bg-opacity-75 sticky z-20 top-0 text-black font-bold shadow-lg">
       <div className="navbar-start ">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -156,7 +156,7 @@ const Navbar = () => {
         </div>
         <Link href="/">
           <button className="font-libre font-bold md:text-2xl text-xl btn btn-ghost normal-case ">
-            Marriage Media
+            Matromonia
           </button>
           {/* <img src={logo} alt="Logo" width="120px" className="lg:ml-20" /> */}
         </Link>

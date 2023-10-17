@@ -1,9 +1,9 @@
 /* eslint-disable react/prop-types */
 
+import toast from "react-hot-toast";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 import { useNavigate } from "react-router-dom";
 import Cookies from "universal-cookie";
-import { PhotoProvider, PhotoView } from "react-photo-view";
-import toast from "react-hot-toast";
 import { packageCheck } from "../../Utils/purchesTimeCheck";
 import pic from "../../assets/marriage.jpg";
 
@@ -46,7 +46,7 @@ const HomeSearchCard = ({ user }) => {
   };
 
   return (
-    <div className="card bg-gradient-to-t from-rose-100 to-teal-100 card-compact w-64 shadow-[rgba(0,_0,_0,_0.3)_5px_15px_20px] md:mx-4 mx-6 sm:px-2 mt-9 mb-14  py-3">
+    <div className="card  card-compact w-72 shadow-md md:mx-4 mx-6 sm:px-2 mt-9 mb-14  py-3">
       <figure>
         <PhotoProvider>
           <PhotoView src={photo ? photo : pic}>
@@ -70,30 +70,30 @@ const HomeSearchCard = ({ user }) => {
               {name}{" "}
             </span>
           ) : (
-            <span className="text-red-500 text-lg">Name: Login First </span>
+            <span className="text-black text-lg">{name} </span>
           )}
         </h2>
         <h2 className="text-xs mb-2 w-[80%] mx-auto">{designation}</h2>
         <div className="overflow-x-auto">
-          <table className="table leading-[3px]">
+          <table className="table leading-[3px]  ">
             <tbody>
               {" "}
               <td>Current City</td>
-              <td className="font-bold"> {currentCity}</td>
+              <td> {currentCity}</td>
             </tbody>
             <tbody>
               <td>Religion</td>
-              <td className="font-bold"> {religion}</td>
+              <td > {religion}</td>
             </tbody>
 
             <tbody>
               <td>Education</td>
-              <td className="font-bold"> {education}</td>
+              <td > {education}</td>
             </tbody>
             <tbody>
               {" "}
               <td>Age</td>
-              <td className="font-bold"> {age}</td>
+              <td > {age}</td>
             </tbody>
           </table>
         </div>
