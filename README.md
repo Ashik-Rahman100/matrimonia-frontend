@@ -46,6 +46,7 @@ Marriage Media is an online platform designed to help people find their soulmate
 3. Browse user profiles and explore the available features.
 4. Consider purchasing a premium package for added benefits.
 5. Start connecting with potential matches and begin your journey to finding your soulmate.
+<!--
 
 ## Support
 
@@ -61,4 +62,4 @@ This project is licensed under [TH Raju](https://tofajjol-hosen-raju.web.app/).
 
 ---
 
-Thank you for choosing Marriage Media to embark on your journey to find your soulmate. We wish you the best of luck in your search for love!
+Thank you for choosing Marriage Media to embark on your journey to find your soulmate. We wish you the best of luck in your search for love! -->
