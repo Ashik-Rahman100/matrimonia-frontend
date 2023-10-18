@@ -46,8 +46,8 @@ const HomeSearchCard = ({ user }) => {
   };
 
   return (
-    <Link to={`https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/${_id}`}>
-    <div className="card  card-compact w-[100%] shadow-md mt-9 mb-14  py-3">
+    <Link to={`/userDetails/${_id}`}>
+    <div className="card  card-compact w-[95%] shadow-md mt-9 mb-14 py-3">
       <figure>
         <PhotoProvider>
           <PhotoView src={photo ? photo : pic}>

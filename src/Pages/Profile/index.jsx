@@ -1,6 +1,6 @@
 import {
-    ChatBubbleLeftEllipsisIcon,
-    PencilSquareIcon,
+  ChatBubbleLeftEllipsisIcon,
+  PencilSquareIcon,
 } from "@heroicons/react/24/solid";
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
@@ -104,7 +104,7 @@ const Profile = () => {
   }
 
   return (
-    <div className="card bg-gradient-to-r from-blue-300 via-green-200 to-yellow-300 shadow-xl pt-20">
+    <div className="card shadow-xl pt-20">
       <figure>
         <PhotoProvider>
           <PhotoView src={photo ? photo : img}>
