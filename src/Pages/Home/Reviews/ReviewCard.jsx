@@ -1,8 +1,9 @@
 import { PhotoProvider, PhotoView } from "react-photo-view";
+import img from '../../../assets/r4.jpg';
 
 /* eslint-disable react/prop-types */
 const ReviewCard = ({ review }) => {
-  const { name, img, rating, description } = review;
+  const { name, rating, description } = review;
   return (
     <div className="bg-base-200 mx-4 p-4 rounded">
        
