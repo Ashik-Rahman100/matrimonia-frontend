@@ -82,24 +82,24 @@ const PackageCard = ({ pack, id }) => {
         } 
         ${
           pack.title === "Silver" &&
-          "bg-gradient-to-t from-blue-400 to-emerald-400"
+          ""
           // "flex justify-center flex-col space-y-6 rounded shadow  bg-gradient-to-b from-sky-400 to-blue-400  text-gray-900"
         } 
         ${
           pack.title === "Gold" &&
-          "bg-gradient-to-t from-blue-400 to-emerald-400"
+          ""
           // "  space-y-6 rounded shadow  bg-gradient-to-b from-green-600 via-green-300 to-blue-500"
         }
         ${
           pack.title === "Diamond" &&
-          "bg-gradient-to-t from-blue-400 to-emerald-400"
+          ""
           // "flex justify-center flex-col space-y-6 rounded shadow  bg-gradient-to-b from-sky-400 to-blue-400  text-gray-900"
         }`}
       >
         <div>
           <div className="space-y-2">
             <h4 className="text-2xl font-bold">{pack.title}</h4>
-            <span className="text-6xl font-bold">{pack.price} Tk</span>
+            <span className="text-4xl font-bold">{pack.price} Tk</span>
             {pack.title === "Free" ? (
               <span className="text-xl font-semibold ml-2"> for 15 Days</span>
             ) : (
@@ -182,13 +182,13 @@ const PackageCard = ({ pack, id }) => {
         <dialog id={id} className="modal">
           <div className="modal-box">
             <h3 className="text-2xl font-bold">{pack.title} Package</h3>
-            <h3 className=" text-lg">
+            <h3 className=" text-small">
               Pay <span className="text-xl font-bold"> {pack.price} Tk</span>
             </h3>
-            <h3 className=" text-lg">
+            <h3 className=" text-small">
               On <span className="font-bold">BKash</span>{" "}
-              <span className="font-bold text-red-500 underline">
-                01859-053543
+              <span className="font-small text-red-500 underline">
+                01836595245
               </span>{" "}
             </h3>
             <form action="" onSubmit={handleSubmit(onSubmit)}>
@@ -261,7 +261,7 @@ const PackageCard = ({ pack, id }) => {
               </div>
               <div className="flex justify-end gap-7 my-5">
                 <form method="dialog">
-                  <button className="btn btn-error">Close</button>
+                  <button className="btn btn-error text-white">Close</button>
                 </form>
                 <button
                   type="submit"

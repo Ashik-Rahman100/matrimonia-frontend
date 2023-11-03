@@ -16,12 +16,12 @@ const Packages = () => {
   });
 
   return (
-    <div className=" container px-4 mx-auto pt-20  text-black ">
+    <div className=" container px-4 mx-auto py-24  text-black ">
       <div className="max-w-2xl mx-auto mb-8 text-center">
         <span className=" tracki uppercase text-black text-3xl lg:text-5xl font-libre font-bold">
           Membership <span className="text-red-600">Plans</span>
         </span>
-        <h2 className="text-4xl text-black font-bold ">
+        <h2 className="text-4xl text-black font-bold mt-4">
           Choose your best plan
         </h2>
         <p className="mt-5">

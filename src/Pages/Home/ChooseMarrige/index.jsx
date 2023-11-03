@@ -2,9 +2,9 @@
 /* eslint-disable react/no-unknown-property */
 const ChooseMarriage = () => {
   return (
-    <div className="sm:flex items-center justify-around w-5/6 mx-auto md:mt-12 mt-10">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 w-5/6 mx-auto my-10 lg:my-24">
       {/* Video */}
-      <div className="md:w-1/2">
+      <div className="">
         <iframe
           className="w-full h-96"
           width="560"
@@ -18,7 +18,7 @@ const ChooseMarriage = () => {
       </div>
 
       {/* Text */}
-      <div className="md:w-3/6 w-4/5 md:p-8 pt-8 mx-auto md:my-20 my-2">
+      <div className="">
         <h2 className="text-3xl font-libre font-bold lg:text-5xl mb-4 ">
           Why Choose <span className="text-red-600">Matromonia</span>
         </h2>

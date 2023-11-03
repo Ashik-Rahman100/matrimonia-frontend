@@ -1,13 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 
-import { Link, useNavigate } from "react-router-dom";
-import pic from "../../assets/wedding.jpg";
+import toast from "react-hot-toast";
 import { PhotoProvider, PhotoView } from "react-photo-view";
-import { useEffect, useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import toast, { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import { packageCheck } from "../../Utils/purchesTimeCheck";
+import pic from "../../assets/wedding.jpg";
 
 // data from ProfileCard.jsx
 const ProfileCard = ({ data, userEmail }) => {

@@ -9,9 +9,9 @@ import img7 from "../../../assets/7.jpg";
 
 const SpecialMoments = () => {
   return (
-    <div className="md:my-28 my-4">
+    <div className="lg:my-28 my-4">
       <div>
-        <h1 className="text-3xl font-bold text-center">
+        <h1 className="text-3xl font-bold text-center font-libre">
           Special <span className="text-red-600">Moments</span>
         </h1>
         <p className="text-center md:w-3/6 w-4/5 mx-auto my-5">

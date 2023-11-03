@@ -78,6 +78,7 @@ export default function ProfilesSlide() {
           speed: 500,
           fade: true,
           cssEase: "linear",
+          dots:false
         },
       },
     ],

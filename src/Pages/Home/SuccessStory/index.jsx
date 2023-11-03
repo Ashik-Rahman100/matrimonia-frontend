@@ -59,7 +59,7 @@ const SuccessStory = () => {
       </div>
       <Swiper
         slidesPerView={slidePerView}
-        spaceBetween={30}
+        spaceBetween={10}
         loop={true}
         pagination={{
           clickable: true,

@@ -5,8 +5,9 @@ import { PhotoProvider, PhotoView } from "react-photo-view";
 import imge from "../../assets/marriage.jpg";
 const SuccessCard = ({ story }) => {
   return (
-    <div className="card lg:card-side lg:h-68 bg-base-100 shadow-xl mx-12 mb-16 p-2">
-      <figure>
+    <div className="card lg:card-side lg:h-68 bg-base-100 shadow-xl mx-8 mb-16 p-2">
+     <div className="flex flex-col">
+     <figure>
         <PhotoProvider>
           <PhotoView src={story.pic ? story.pic : imge}>
             <img
@@ -17,19 +18,20 @@ const SuccessCard = ({ story }) => {
           </PhotoView>
         </PhotoProvider>
       </figure>
-      <div className=" w-4/5 ml-4 ">
-        <h2 className="card-title">{story.name}</h2>
-        <p className=" h-2/4 w-full">
+      <div className="  ml-4 ">
+        <h2 className="card-title mt-2">{story.name}</h2>
+        <p className=" h-2/4 w-full mt-2">
           {story.details.slice(0, 150)}
           <button
             onClick={() => document.getElementById(story.id).showModal()}
-            className="font-bold"
+            className="font-semibold"
           >
-            {story.details.length > 149 && "...Read more"}
+            {story.details.length > 149 && "... Read more"}
           </button>
           <input type="checkbox" id="my_modal_7" className="modal-toggle" />
         </p>
       </div>
+     </div>
       <dialog id={story.id} className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <h3 className="font-bold text-lg">{story.name}'s Success Story</h3>
