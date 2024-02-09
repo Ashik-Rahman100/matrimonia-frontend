@@ -27,16 +27,13 @@ const Login = () => {
     // console.log(data);
 
     setLoading(true);
-    fetch(
-      "https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      }
-    )
+    fetch("https://matrimoni-ashik-rahman100.vercel.app/api/v1/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    })
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);
@@ -71,6 +68,15 @@ const Login = () => {
       <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
         <div className="mx-auto max-w-lg text-center">
           <h1 className="text-2xl font-bold sm:text-3xl">Log in</h1>
+          <div className="my-4 ">
+            <select className="select select-bordered w-full max-w-xs px-4 py-3">
+              <option disabled selected>
+                Demo User
+              </option>
+              <option>Admin: admin@gmail.com pass: 123456</option>
+              <option>User: mosh@gmail.com pass: 123456</option>
+            </select>
+          </div>
         </div>
 
         <form

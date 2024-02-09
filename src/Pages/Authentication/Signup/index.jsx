@@ -156,6 +156,15 @@ const Signup = () => {
 
       <div className="mx-auto max-w-lg text-center">
         <h1 className="text-2xl font-bold sm:text-3xl">Create Your Account</h1>
+        <div className="my-4 ">
+            <select className="select select-bordered w-full max-w-xs px-4 py-3">
+              <option disabled selected>
+                Demo User
+              </option>
+              <option>Admin: admin@gmail.com pass: 123456</option>
+              <option>User: mosh@gmail.com pass: 123456</option>
+            </select>
+          </div>
       </div>
 
       <form
