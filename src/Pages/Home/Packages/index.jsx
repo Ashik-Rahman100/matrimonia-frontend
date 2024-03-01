@@ -32,7 +32,7 @@ const Packages = () => {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4   gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         {packages?.map((pack) => (
           <PackageCard pack={pack} key={pack.id} id={pack._id}></PackageCard>
         ))}

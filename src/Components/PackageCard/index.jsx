@@ -72,13 +72,13 @@ const PackageCard = ({ pack, id }) => {
   };
 
   return (
-    <div className="flex justify-center w-full ">
+    <div className="flex justify-center w-full  h-96">
       <Toaster />
       <div
         className={`flex flex-col  space-y-6 rounded shadow  p-4 text-black  
         ${
           pack.title === "Free" &&
-          "bg-gradient-to-t from-blue-400 to-emerald-400"
+          "border-2 rounded-2xl border-indigo-500/100 "
         } 
         ${
           pack.title === "Silver" &&
@@ -101,7 +101,7 @@ const PackageCard = ({ pack, id }) => {
             <h4 className="text-2xl font-bold">{pack.title}</h4>
             <span className="text-4xl font-bold">{pack.price} Tk</span>
             {pack.title === "Free" ? (
-              <span className="text-xl font-semibold ml-2"> for 15 Days</span>
+              <span className="text-xl  font-semibold ml-2"> for 15 Days</span>
             ) : (
               ""
             )}
@@ -164,7 +164,7 @@ const PackageCard = ({ pack, id }) => {
             type="button"
             className="inline-block px-5 py-3 font-semibold tracki text-center rounded bg-blue-700 text-white hover:bg-indigo-800"
           >
-            Buy Now
+            Subscribe Now 
           </button>
         )}
         {!userEmail ? (
@@ -173,7 +173,7 @@ const PackageCard = ({ pack, id }) => {
             onClick={() => document.getElementById(id).showModal()}
             className="inline-block px-5 py-3 font-semibold tracki text-center rounded bg-blue-700 text-white hover:bg-indigo-800"
           >
-            Login First
+            Subscribe Now
           </Link>
         ) : (
           ""

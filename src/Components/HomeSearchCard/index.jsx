@@ -22,7 +22,7 @@ const HomeSearchCard = ({ user }) => {
     education,
     _id,
     designation,
-    currentCity,
+    // currentCity,
   } = user;
 
   const checkView = async () => {
@@ -46,25 +46,25 @@ const HomeSearchCard = ({ user }) => {
   };
 
   return (
-    <Link to={`/userDetails/${_id}`}>
-      <div className="card card-compact w-[95%] shadow-md mt-9 mb-14 py-3 min-h-10">
-        <figure>
+    <Link  to={`/userDetails/${_id}`}>
+      <div className="card card-compact w-full lg:w-96 bg-base-100 shadow-xl h-[500px] my-24">
+        <figure className="">
           <PhotoProvider>
             <PhotoView src={photo ? photo : pic}>
               <img
                 src={photo ? photo : pic}
-                alt="Shoes"
-                className="h-40 object-fill w-40 rounded-full border border-blue-400 "
+                alt="image"
+                className=""
               />
             </PhotoView>
           </PhotoProvider>
         </figure>
 
         <div
-          className="pl-2 text-center cursor-pointer"
+          className="pl-2 text-start cursor-pointer"
           onClick={() => checkView()}
         >
-          <h2 className=" font-bold mt-2 text-xl w-[80%] mx-auto">
+          {/* <h2 className=" font-bold mt-2 text-xl w-[80%] mx-auto">
             {userEmail ? (
               <span className=" font-bold mt-2 text-xl w-[80%] mx-auto">
                 {" "}
@@ -73,30 +73,21 @@ const HomeSearchCard = ({ user }) => {
             ) : (
               <span className="text-black text-lg">{name} </span>
             )}
-          </h2>
-          <h2 className="text-xs mb-2 w-[80%] mx-auto">{designation}</h2>
+          </h2> */}
+          
           <div className="overflow-x-auto">
-            <table className="table leading-[3px]  ">
-            <tbody>
-              {" "}
-              <td>Current City</td>
-              <td> {currentCity}</td>
-            </tbody>
-            <tbody>
-              <td>Religion</td>
-              <td > {religion}</td>
-            </tbody>
-
-            <tbody>
-              <td>Education</td>
-              <td > {education}</td>
-            </tbody>
-            <tbody>
-              {" "}
-              <td>Age</td>
-              <td > {age}</td>
-            </tbody>
-          </table>
+            <div className="card-body items-start text-start">
+              {userEmail && <h2 className="card-title">{name}</h2>}
+              {userEmail && <h2 > {designation}</h2>}
+              {age &&<p>Age :{age}</p>}
+              {education &&<p>Education: {education}</p>}
+              {education &&<p>Religion: {religion}</p>}
+              <div className="card-actions">
+                <Link to={`/userDetails/${_id}`}>
+                  <button className="btn btn-primary">Connect</button>
+                </Link>
+              </div>
+            </div>
             {/* <div className="flex justify-between">
               <p>Current City: </p>
               <span>{currentCity}</span>

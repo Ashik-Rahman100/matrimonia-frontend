@@ -106,12 +106,13 @@ const UserDetails = () => {
   }
 
   return (
-    <div className="card bg-base-100 shadow-xl pt-24">
+    <div className="card bg-base-100 w-full lg:w-2/3 mx-auto shadow-xl my-24">
       <Toaster></Toaster>
       <figure>
         <img src={photo ? photo : img} alt=" Album" className="w-44" />
       </figure>
       <div className="card-body">
+        <div className="flex justify-around items-center w-96 mx-auto">
         <h3 className="text-center">
           Profile ID{" "}
           <span className=" font-bold text-red-500">{_id.slice(-5)}</span>
@@ -121,8 +122,9 @@ const UserDetails = () => {
             className="btn btn-primary btn-sm"
             onClick={() => document.getElementById("my_modal_3").showModal()}
           >
-            Connect
+           Send Proposal
           </button>
+        </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 justify-center">
           <div>

@@ -49,7 +49,7 @@ const Navbar = () => {
       </Link>
       <Link to="/packages">
         <li className="hover:bg-sky-500 rounded-lg duration-100">
-          <span className=" hover:text-white duration-150">Premium Plans</span>
+          <span className=" hover:text-white duration-150">Packages</span>
         </li>
       </Link>
       <Link to="/contact">
@@ -116,13 +116,13 @@ const Navbar = () => {
               <button className=" hover:text-white duration-150">Log in</button>
             </li>
           </Link>
-          <Link to="/signup">
+          {/* <Link to="/signup">
             <li className="hover:bg-sky-500 rounded-lg duration-100 lg:mr-10">
               <button className=" hover:text-white duration-150">
                 Sign up
               </button>
             </li>
-          </Link>
+          </Link> */}
         </>
       )}
     </>
@@ -165,7 +165,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1 text-md ">{menuItems}</ul>
       </div>
 
-      <div className="navbar-end lg:hidden lg:mr-10">
+      {userEmail && <div className="navbar-end lg:hidden lg:mr-10">
         <div className="flex flex-col items-end justify-end">
           <label
             htmlFor="my-drawer-2"
@@ -188,7 +188,7 @@ const Navbar = () => {
             </svg>
           </label>
         </div>
-      </div>
+      </div>}
 
       {/* <div className="navbar-end lg:hidden">
         <div className="flex flex-col items-end justify-end">
