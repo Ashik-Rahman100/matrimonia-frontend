@@ -1,30 +1,55 @@
 import { PhotoProvider, PhotoView } from "react-photo-view";
-import img from '../../../assets/r4.jpg';
+import img from "../../../assets/r4.jpg";
 
 /* eslint-disable react/prop-types */
 const ReviewCard = ({ review }) => {
-  const { name, rating, description } = review;
+  const { name, rating, description, image } = review;
   return (
-    <div className="bg-base-200 mx-4 p-4 rounded">
-       
-      <div className="flex justify-center items-center">
-      <figure>
-        <PhotoProvider>
-          <PhotoView src={img}>
-            <img
-              src={img}
-              alt="Shoes"
-              className="h-40 object-fill w-40 rounded-full border border-blue-400 "
-            />
-          </PhotoView>
-        </PhotoProvider>
-      </figure>
-      </div>
-      <div className="text-center">
-        <h2 className="mt-2">{name}</h2>
+    <div >
+      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+        <figure>
+          <PhotoProvider>
+            <PhotoView src={img}>{image}</PhotoView>
+          </PhotoProvider>
+        </figure>
+        <div className="card-body my-6">
+        <h2 className=" card-title flex justify-center ">{name}</h2>
+        <div className="flex justify-between mt-4">
         <p>rating {rating}</p>
+        <div className="rating">
+          <input
+            type="radio"
+            name="rating-2"
+            className="mask mask-star-2 bg-orange-400"
+          />
+          <input
+            type="radio"
+            name="rating-2"
+            className="mask mask-star-2 bg-orange-400"
+            checked
+          />
+          <input
+            type="radio"
+            name="rating-2"
+            className="mask mask-star-2 bg-orange-400"
+          />
+          <input
+            type="radio"
+            name="rating-2"
+            className="mask mask-star-2 bg-orange-400"
+          />
+          <input
+            type="radio"
+            name="rating-2"
+            className="mask mask-star-2 bg-orange-400"
+          />
+        </div>
+       
+        </div>
         <p>{description}</p>
       </div>
+      </div>
+      
     </div>
   );
 };

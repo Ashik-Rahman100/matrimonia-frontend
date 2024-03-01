@@ -35,7 +35,9 @@ const Reviews = () => {
   };
   return (
     <div className="my-4 lg:my-24">
-         <h2 className="text-3xl lg:text-5xl font-bold font-serif text-center mb-8">Reviews</h2>
+      <h2 className="text-3xl lg:text-5xl font-bold font-serif text-center my-20">
+        Reviews
+      </h2>
       <Slider {...settings}>
         {reviews &&
           reviews?.map((review) => (

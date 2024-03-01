@@ -77,11 +77,11 @@ const HomeSearchCard = ({ user }) => {
           
           <div className="overflow-x-auto">
             <div className="card-body items-start text-start">
-              {userEmail && <h2 className="card-title">{name}</h2>}
-              {userEmail && <h2 > {designation}</h2>}
+              <h2 className="card-title">{name}</h2>
+               <h2 > {designation}</h2>
               {age &&<p>Age :{age}</p>}
-              {education &&<p>Education: {education}</p>}
-              {education &&<p>Religion: {religion}</p>}
+              <p>Education: {education}</p>
+              <p>Religion: {religion}</p>
               <div className="card-actions">
                 <Link to={`/userDetails/${_id}`}>
                   <button className="btn btn-primary">Connect</button>
