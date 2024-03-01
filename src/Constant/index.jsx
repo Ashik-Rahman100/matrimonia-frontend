@@ -7,7 +7,7 @@ import img4 from "../../src/assets/client/client4.png"
 export const reviews = [
     {
         id:1,
-        name:"Androw Hinton",
+        name:"Ema Watson",
         image:(<img
             src={img1}
             alt="client image"
@@ -18,7 +18,7 @@ export const reviews = [
     },
     {
         id:2,
-        name:"Winston",
+        name:"Nabila",
         image:(<img
             src={img2}
             alt="client image"
@@ -29,7 +29,7 @@ export const reviews = [
     },
     {
         id:3,
-        name:"Jhon Wick",
+        name:"Andrella",
         image:(<img
             src={img3}
             alt="client image"
@@ -40,7 +40,7 @@ export const reviews = [
     },
     {
         id:4,
-        name:"Ema Watson",
+        name:"Jhon wick",
         image:(<img
             src={img4}
             alt="client image"
