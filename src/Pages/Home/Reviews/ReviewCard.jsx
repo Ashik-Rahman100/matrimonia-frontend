@@ -6,7 +6,7 @@ const ReviewCard = ({ review }) => {
   const { name, rating, description, image } = review;
   return (
     <div >
-      <div className="card card-compact w-96 bg-base-100 shadow-xl">
+      <div className="card card-compact w-full lg:w-96 bg-base-100 shadow-xl">
         <figure>
           <PhotoProvider>
             <PhotoView src={img}>{image}</PhotoView>
