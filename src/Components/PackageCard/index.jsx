@@ -58,6 +58,7 @@ const PackageCard = ({ pack, id }) => {
       .then((res) => res.json())
       .then((data) => {
         toast.success("Package Purches Successfull");
+        alert("payment successfully done.")
 
         // console.log(data);
       });

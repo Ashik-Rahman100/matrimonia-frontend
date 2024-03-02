@@ -1,12 +1,13 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/no-unknown-property */
-
+import emailjs from "@emailjs/browser";
+import React, { useRef } from "react";
 import { useForm } from "react-hook-form";
-import contact from "../../assets/contact.gif";
 import toast, { Toaster } from "react-hot-toast";
+import contact from "../../assets/contact.gif";
 
-const notify = () => toast.success("Thank you.");
+const notify = () => toast.success("Thank you for contact us");
 
 const Contacts = () => {
   const { register, handleSubmit, reset } = useForm();
@@ -14,6 +15,28 @@ const Contacts = () => {
     // console.log(data);
     notify();
     reset();
+  };
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm("service_8u1rkf8", "template_6jcivzm", form.current, {
+        publicKey: "Dh0HzYkiVYLzRZFtY",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          notify();
+          reset();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+          toast.error("Something went wrong");
+        }
+      );
   };
 
   return (
@@ -44,7 +67,8 @@ const Contacts = () => {
           />
         </div>
         <form
-          onSubmit={handleSubmit(onSubmit)}
+          ref={form}
+          onSubmit={sendEmail}
           noValidate=""
           className="space-y-6"
         >
@@ -54,8 +78,9 @@ const Contacts = () => {
             </label>
             <input
               type="text"
-              {...register("name")}
+              {...register("user_name")}
               placeholder="Enter Your Name"
+              name="user_name"
               className="w-full p-3 rounded border border-black"
             />
           </div>
@@ -65,7 +90,8 @@ const Contacts = () => {
             </label>
             <input
               type="email"
-              {...register("email", { required: true })}
+              name="user_email"
+              {...register("user_email", { required: true })}
               placeholder="Enter your Email"
               className="w-full p-3 rounded  border border-black"
             />
@@ -76,6 +102,7 @@ const Contacts = () => {
             </label>
             <input
               type="text"
+              name="subject"
               {...register("subject")}
               placeholder="Subject"
               className="w-full p-3 rounded  border border-black"
@@ -88,6 +115,7 @@ const Contacts = () => {
             <textarea
               rows="3"
               {...register("message", { required: true })}
+              name="message"
               placeholder="Write your Message"
               className="w-full p-3 rounded  border border-black"
             ></textarea>

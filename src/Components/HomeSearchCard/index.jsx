@@ -41,7 +41,7 @@ const HomeSearchCard = ({ user }) => {
     if (checkProfle) {
       navigate(`/userDetails/${_id}`);
     } else {
-      toast.error("Please Update Package");
+      // toast.error("Please Update Package");
     }
   };
 

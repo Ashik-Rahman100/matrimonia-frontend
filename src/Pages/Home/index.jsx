@@ -1,4 +1,5 @@
 import AdminRoute from "../../SecureRoute/AdminRoute";
+import Contacts from "../Contact";
 import Banner from "./Banner";
 import ChooseMarriage from "./ChooseMarrige";
 import { Faq } from "./Faq";
@@ -19,6 +20,7 @@ const Home = () => {
       <SpecialMoments />
       <AdminRoute></AdminRoute>
       <Reviews />
+      <Contacts />
       <Faq />
     </div>
   );
